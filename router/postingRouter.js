@@ -8,7 +8,22 @@ postingRouter.get('/', function (req, res) {
     res.send('Posting Test');
 })
 
-postingRouter.post('/add', function (req, res) {
+postingRouter.post('/get-nearby-posting', function(req, res) {
+    var currentLatitude = req.body.position.latitude;
+    var currentLongtitude = req.body.position.longtitude;
+    var distance = req.body.distance
+
+    postingService.getNearbyPosting(currentLatitude, currentLongtitude, distance, function (err, postings) {
+        if (err) {
+            res.status(404).send({ error: err })
+        }
+        res.status(200).send({
+            postings: postings
+        })
+    })
+})
+
+postingRouter.post('/add-posting', function (req, res) {
     var title = req.body.title;
     var description = req.body.description;
     var latitude = req.body.position.latitude;

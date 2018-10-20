@@ -3,6 +3,19 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var User = require('./user');
 
+var pointSchema = new Schema({
+    type: {
+        type: String,
+        enum: ['Point'],
+        default: 'Point',
+        required: true
+    },
+    coordinates: {
+        type: [Number],
+        required: true
+    }
+});
+
 var postingSchema = new Schema({
     _id: {
         type: mongoose.Schema.Types.ObjectId,
@@ -17,15 +30,9 @@ var postingSchema = new Schema({
         type: String,
         ref: 'Description'
     },
-    position: {
-        latitude: {
-            type: Number,
-            required: true
-        },
-        longtitude: {
-            type: Number,
-            required: true
-        },
+    location: {
+        type: pointSchema,
+        required: true
     },
     startTime: {
         type: Date,
@@ -51,6 +58,9 @@ var postingSchema = new Schema({
 }, {
         timestamps: true
     });
+
+
+
 
 var Postings = mongoose.model('Posting', postingSchema);
 module.exports = Postings;
