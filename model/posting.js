@@ -42,4 +42,6 @@ var postingSchema = new Schema({
     timestamps: true
 });
 
-module.exports = Posting;
+var Postings = mongoose.model('User', postingSchema);
+exports.postingSchema = postingSchema;
+exports.Postings = Postings;
