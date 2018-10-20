@@ -1,0 +1,50 @@
+[
+  {
+    "Post_id" : "P000",
+    "Title" : "Wash my clothes",
+    "Description" : "50kg of clothes to wash ASAP",
+    "Position" : {
+      "Long" : 9.96233,
+      "Lat" : 49.80404
+    },
+    "Time_start" : "2018-10-20T00:00:00-0300",
+    "Time_end" : "2018-10-20T02:30:00-0300",
+    "Amount" : 5.00,
+    "Posted by": {
+      "User_id" : "U000",
+      "Username" : "Jack"
+    }
+  },
+  {
+    "Post_id" : "P001",
+    "Title" : "Sweep my floor",
+    "Description" : "HDB 3 room only cheap cheap",
+    "Position" : {
+      "Long" : 9.96233,
+      "Lat" : 49.80404
+    },
+    "Time_start" : "2018-10-20T10:00:00-0300",
+    "Time_end" : "2018-10-20T12:00:00-0300",
+    "Amount" : 2.00,
+    "Posted by": {
+      "User_id" : "U000",
+      "Username" : "Jack"
+    }
+  },
+  {
+    "Post_id" : "P002",
+    "Title" : "Wash my car",
+    "Description" : "ezpz",
+    "Position" : {
+      "Long" : 9.96233,
+      "Lat" : 49.80404
+    },
+    "Time_start" : "2018-10-20T00:00:00-0300",
+    "Time_end" : "2018-10-20T02:30:00-0300",
+    "Amount" : 10.00,
+    "Posted by": {
+      "User_id" : "U001",
+      "Username" : "Addison"
+    }
+  }
+]

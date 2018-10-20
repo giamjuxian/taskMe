@@ -1,0 +1,32 @@
+[
+  {
+    "User_id" : "U000"
+    "Username" : "Jack",
+    "Date_Joined" : "2018-10-19T00:00:00-0300",
+    "Rating" : [
+      {
+        "Star" : 5,
+        "Given_by" : {
+          "User_id" : "U001",
+          "Username" : "Addison"
+        }
+      }
+    ],
+    "Phone_number" : "91234567"
+  },
+  {
+    "User_id" : "U001"
+    "Username" : "Addison",
+    "Date_Joined" : "2018-10-19T00:00:00-0300",
+    "Rating" : [
+      {
+        "Star" : 1,
+        "Given_by" : {
+          "User_id" : "U000",
+          "Username" : "Jack"
+        }
+      }
+    ],
+    "Phone_number" : "98888888"
+  }
+]
