@@ -41,11 +41,13 @@
 
     <group android:id="@+id/grp2" android:checkableBehavior="single">
             <item
+                android:id="@+id/tag6"
                 android:checked="false"
                 android:icon="@drawable/ratethisapp"
                 android:title="@string/tagBottom1" />
 
         <item
+            android:id="@+id/tag7"
             android:checked="false"
             android:icon="@drawable/logout"
             android:title="@string/tagBottom2" />

@@ -63,16 +63,20 @@
                         android:layout_marginRight="@dimen/_5sdp"
                         android:visibility="invisible"/>
 
-                    <TextView
+                    <EditText
                         android:id="@+id/searchword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Search"
+                        android:hint="Search"
                         android:textSize="@dimen/_14sdp"
                         android:layout_centerVertical="true"
                         android:textColor="@color/lightgray"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:layout_toLeftOf="@id/homepage_topsearch"
+                        android:layout_toRightOf="@id/homePageHamburger"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:background="@null"
                         android:visibility="invisible"/>
 
                     <ImageView
@@ -200,6 +204,30 @@
 
         </fragment>
 
+        <TextView
+            android:id="@+id/profilepage_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not yet implemented in these 2 days. Shows the user Profile Page."
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/activitypage_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not yet implemented in these 2 days. Shows the user Activity Page."
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="invisible"/>
+
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/searchLayout"
             android:layout_width="match_parent"
@@ -239,7 +267,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Size:"
+                    android:text="Category:"
                     android:textColor="#000000"
                     android:textSize="@dimen/_12sdp"
                     android:layout_toLeftOf="@id/sizespinner"
@@ -366,7 +394,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -429,7 +457,7 @@
                         android:id="@+id/mainimageview_item2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_110sdp"
-                        android:src="@drawable/sample1"
+                        android:src="@drawable/sample2"
                         android:layout_marginTop="@dimen/_3sdp"
                         android:scaleType="fitXY"
                         android:layout_marginLeft="@dimen/_10sdp"
@@ -474,7 +502,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -583,7 +611,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -692,7 +720,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -801,7 +829,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -911,7 +939,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -1021,7 +1049,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
@@ -1131,7 +1159,7 @@
                         android:paddingBottom="@dimen/_5sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@drawable/selling_contact"
+                        android:background="@drawable/contact_selector"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/primarygreen"/>
                     <View
