@@ -1,6 +1,6 @@
 [
   {
-    "User_id" : "U000"
+    "User_id" : "U000",
     "Username" : "Jack",
     "Date_Joined" : "2018-10-19T00:00:00-0300",
     "Rating" : [
@@ -15,7 +15,7 @@
     "Phone_number" : "91234567"
   },
   {
-    "User_id" : "U001"
+    "User_id" : "U001",
     "Username" : "Addison",
     "Date_Joined" : "2018-10-19T00:00:00-0300",
     "Rating" : [

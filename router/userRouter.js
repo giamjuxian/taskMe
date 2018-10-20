@@ -1,9 +1,10 @@
 'use strict'
+
 var express = require('express');
-var userRouter = express.Router();
 var mongoose = require('mongoose');
 var Users = require('../model/user');
 var ObjectID = require('mongodb').ObjectID;
+var userRouter = express.Router();
 
 userRouter.get('/', function (req, res) {
     res.send('user router Test');
@@ -14,7 +15,7 @@ userRouter.get('/about', function (req, res) {
 })
 
 userRouter.get('/add', function (req, res) {
-    let testUser  = {
+    let testUser = {
         _id: new ObjectID(),
         name: "ADDISON",
         phoneNumber: "91234567"

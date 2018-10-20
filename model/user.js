@@ -7,23 +7,35 @@ var userSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
-    name : {
+    name: {
         type: String,
         required: true,
         ref: 'Name'
-    }, 
-    phoneNumber : {
+    },
+    phoneNumber: {
         type: Number,
         ref: 'Phone Number'
-    }, 
-    rating: {
-        type: Number,
-        default: 5.0,
-        required: true
+    },
+    ratings: {
+        type: Array,
+        items: {
+            rating: {
+                type: Number,
+            },
+            postedBy: {
+                _id: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    required: true
+                },
+                name: {
+                    type: String
+                }
+            }
+        }
     }
 }, {
-    timestamps: true
-});
+        timestamps: true
+    });
 
 var Users = mongoose.model('User', userSchema);
 module.exports = Users;
