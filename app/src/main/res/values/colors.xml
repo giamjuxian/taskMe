@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTopHomeBar">#FFFFFF</color>
+    <color name="colorMainWord">#000000</color>
+    <color name="primarygreen">#8BC34A</color>
+    <color name="primarygreendark">#33691E</color>
+    <color name="darkgray">#464646</color>
+    <color name="lightgray">#7f7f7f</color>
+    <color name="verylightgray">#e0e0e0</color>
+    <color name="verylightgray_translucent">#cce0e0e0</color>
+    <color name="mainbackgroundcolor">#ECEFF1</color>
+</resources>

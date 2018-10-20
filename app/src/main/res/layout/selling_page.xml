@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/selling_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/selling_back"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/backtag"
+            android:padding="@dimen/_13sdp"/>
+
+        <TextView
+            android:id="@+id/reward_cataloguetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW LIST"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:src="@drawable/shoppingbag"
+            android:layout_toRightOf="@id/reward_cataloguetext"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/_8sdp"
+            />
+
+
+        <ImageView
+            android:id="@+id/selling_doneButton"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/tick"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_13sdp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selling_topbar"
+        android:background="@color/mainbackgroundcolor">
+
+        <LinearLayout
+            android:id="@+id/camerabar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardElevation="@dimen/_2sdp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="@dimen/_3sdp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/selling_coverphoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/_2sdp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/camera"
+                    android:layout_gravity="center"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/_2sdp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/camera"
+                    android:layout_gravity="center"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/_2sdp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/camera"
+                    android:layout_gravity="center"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/coverphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cover Photo"
+            android:layout_below="@id/camerabar"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/lightgray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is prohibited?"
+            android:layout_below="@id/camerabar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/lightgray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/coverphoto"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_centerVertical="true"/>
+
+                <Spinner
+                    android:id="@+id/sellspinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:gravity="right"
+                    android:dropDownSelector="@drawable/spinnerbackground"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_12sdp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/verylightgray"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/verylightgray"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/title_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/title_desc"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:hint="Enter your title"
+                    android:textSize="@dimen/_10sdp"
+                    android:cursorVisible="true"
+                    android:background="#00000000"
+                    android:gravity="right|center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/verylightgray"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/selling_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/selling_desc"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:hint="Enter your description"
+                    android:textSize="@dimen/_10sdp"
+                    android:cursorVisible="true"
+                    android:background="#00000000"
+                    android:gravity="right|center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/verylightgray"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/size_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/size_desc"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/selling_smallButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Small"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:background="@drawable/selling_size_selected"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/selling_mediumButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColor="@color/colorAccent"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:background="@drawable/selling_size_unselected"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/selling_largeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Large"
+                        android:textColor="@color/colorAccent"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:background="@drawable/selling_size_unselected"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/selling_extralargeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Extra Large"
+                        android:textColor="@color/colorAccent"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:background="@drawable/selling_size_unselected"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/verylightgray"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="#FFFFFF">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meet-Up"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#000000"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 Heng Mui Keng Terrace A418"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_15sdp"/>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/verylightgray" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share To"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/lightgray"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/facebooklogo"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/facebook"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:layout_toRightOf="@id/facebooklogo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/lightgray"/>
+
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/twitterlogo"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/twitter"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Twitter"
+                    android:layout_toRightOf="@id/twitterlogo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/lightgray"/>
+
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/tumblrlogo"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/tumblr"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tumblr"
+                    android:layout_toRightOf="@id/tumblrlogo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/lightgray"/>
+
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+            </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

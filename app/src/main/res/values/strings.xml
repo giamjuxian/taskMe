@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Recycle Bot</string>
+
+    <string name="tag1">My Rewards</string>
+    <string name="tag2">About E-Waste</string>
+    <string name="tag3">How this app works</string>
+    <string name="tag4">Dispute Centre</string>
+    <string name="tag5">Settings</string>
+    <string name="tagBottom1">Rate this App</string>
+    <string name="tagBottom2">Log out</string>
+    <string name="sell">Sell</string>
+    <string name="rewardcataloug">Rewards</string>
+    <string name="person_name">Marcus Lee</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

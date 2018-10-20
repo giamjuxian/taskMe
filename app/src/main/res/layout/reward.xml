@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/topbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:elevation="0dp">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/reward_topbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+
+                    <ImageView
+                        android:id="@+id/reward_back"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:padding="@dimen/_13sdp"
+                        android:src="@drawable/backtag" />
+
+                    <TextView
+                        android:id="@+id/reward_cataloguetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/rewardcataloug"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/reward_cataloguetext"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:src="@drawable/reward" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/reward_searchbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/reward_searchbar" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="Search for reward"
+                        android:textColor="#B0BEC5"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="italic" />
+
+                    <RelativeLayout
+                        android:id="@+id/reward_twobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reward_searchbar"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@color/mainbackgroundcolor"
+                        android:paddingBottom="@dimen/_5sdp">
+
+
+                        <LinearLayout
+                            android:id="@+id/reward_rewardcatalogue"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/reward_myrewardButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/reward_myreward">
+
+                                <TextView
+                                    android:id="@+id/reward_myrewardText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="My Rewards"
+                                    android:textColor="@color/primarygreen"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/reward_catalogueButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/reward_catalogue">
+
+                                <TextView
+                                    android:id="@+id/reward_catalogue_Text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Catalogue"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mainbackgroundcolor">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/reward_profilecardview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginRight="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="@dimen/_3sdp"
+                card_view:cardElevation="@dimen/_2sdp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/reward_profilepic"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:src="@drawable/nav_myprofile" />
+
+                    <TextView
+                        android:id="@+id/reward_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_name"
+                        android:textColor="@color/darkgray"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_toRightOf="@id/reward_profilepic"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reward_name"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_toRightOf="@id/reward_profilepic"
+                        android:text="3284 Available Points"
+                        android:textColor="@color/lightgray"
+                        android:textSize="@dimen/_9sdp"
+                        android:id="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/reward_arrow"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_toLeftOf="@id/reward_arrow"
+                        android:text="Details"
+                        android:textColor="@color/darkgray"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/reward_catalogueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/reward_profilecardview"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginRight="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <!-- the first view -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_samsungimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_samsung"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_samsungRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_samsungDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_samsungRedeem"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="1250 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_samsungtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_samsungDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Enjoy $10 off in any Samsung Store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_alignEnd="@+id/reward_samsungimage"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignRight="@+id/reward_samsungimage"
+                                android:layout_marginBottom="176dp"
+                                android:layout_marginEnd="119dp"
+                                android:layout_marginRight="119dp"
+                                android:padding="@dimen/_13sdp"
+                                android:src="@drawable/backtag" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_starbucksimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_starbucks"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_starbucksRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_starbucksDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_starbucksRedeem"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="580 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_starbuckstext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_starbucksDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:paddingRight="@dimen/_20sdp"
+                                android:text="$5 off any Starbucks drink!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <!-- THe 2nd portion -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_ituneimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_35sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_itune"
+                                android:layout_centerHorizontal="true"/>
+
+
+                            <TextView
+                                android:id="@+id/reward_ituneRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_ituneDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_ituneRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="1080 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_itunetext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_ituneDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$10 iTunes Gift Card"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_hp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="7285 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="5% off for HP laptop"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <!-- THe 3rd portion -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_dellimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/dellsmall"
+                                android:layout_centerHorizontal="true"/>
+
+
+                            <TextView
+                                android:id="@+id/reward_dellRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="1120 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_delltext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$10 off Dell accessories in any Dell Store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/dellsmall"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="1500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$15 off Dell accessories in any Dell Store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <!-- the 4th portion -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_dellimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/challengerlogo"
+                                android:layout_centerHorizontal="true"/>
+
+
+                            <TextView
+                                android:id="@+id/reward_dellRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="560 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_delltext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$5 off in any Challenger store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/m1logo"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="2500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$20 1-time-off for any purchase in M1 store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_dellimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/singtelsmall"
+                                android:layout_centerHorizontal="true"/>
+
+
+                            <TextView
+                                android:id="@+id/reward_dellRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="2500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_delltext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$20 1-time-off for any purchase in Singtel store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:src="@drawable/starhublogo"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Redeem"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="2500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$20 1-time-off for any purchase in Starhub store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reward_myrewardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/reward_profilecardview"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginRight="@dimen/_18sdp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <!-- the first view -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_samsungimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_samsung"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_samsungRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Claim Now"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_samsungDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_samsungRedeem"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="1250 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_samsungtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_samsungDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="Enjoy $10 off in any Samsung Store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/dellsmall"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Claim Now"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="1500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$15 off Dell accessories in any Dell Store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <!-- the 2nd portion -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_dellimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/challengerlogo"
+                                android:layout_centerHorizontal="true"/>
+
+
+                            <TextView
+                                android:id="@+id/reward_dellRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Claim Now"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="560 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_delltext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$5 off in any Challenger store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_hpimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/imageView"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/m1logo"
+                                android:layout_centerHorizontal="true"/>
+
+                            <TextView
+                                android:id="@+id/reward_hpRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/primarygreen"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="Claim Now"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hpDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="2500 Points"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_hptext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_hpDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$20 1-time-off for any purchase in M1 store!"
+                                android:textColor="@color/lightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <!-- The 3rd portion -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_dellimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/singtelsmall"
+                                android:layout_centerHorizontal="true"
+                                android:tint="@color/verylightgray_translucent"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:background="@color/verylightgray"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="CLAIMED"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                            <TextView
+                                android:id="@+id/reward_dellDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellRedeem"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:text="2500 Points"
+                                android:textColor="@color/verylightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_delltext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_dellDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="$20 1-time-off for any purchase in Singtel store!"
+                                android:textColor="@color/verylightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="@dimen/_3sdp"
+                        card_view:cardElevation="@dimen/_2sdp"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:src="@drawable/reward_more" />
+
+                            <ImageView
+                                android:id="@+id/reward_starbucksimage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/reward_starbucks"
+                                android:layout_centerHorizontal="true"
+                                android:tint="@color/verylightgray_translucent"/>
+
+                            <TextView
+                                android:id="@+id/reward_starbucksRedeem"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/verylightgray"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:text="CLAIMED"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_starbucksDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_starbucksRedeem"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="580 Points"
+                                android:textColor="@color/verylightgray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/reward_starbuckstext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/reward_starbucksDesc"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:paddingRight="@dimen/_20sdp"
+                                android:text="$5 off any Starbucks drink!"
+                                android:textColor="@color/verylightgray"
+                                android:textSize="@dimen/_9sdp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

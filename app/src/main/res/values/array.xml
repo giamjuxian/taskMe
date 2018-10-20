@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="map_array">
+        <item>E-Waste Bin</item>
+        <item>Listings</item>
+    </string-array>
+
+    <string-array name="filterby_array">
+        <item>None</item>
+        <item>Location</item>
+        <item>Categories</item>
+        <item>Reputation</item>
+    </string-array>
+
+    <string-array name="size_array">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
+
+    <string-array name="category_array">
+        <item>Others</item>
+        <item>Large Electronics</item>
+        <item>Computer</item>
+        <item>Computer Parts</item>
+        <item>Handphone</item>
+        <item>Handphone Accessories</item>
+        <item>Dryer</item>
+        <item>Printer</item>
+        <item>Refrigerator</item>
+        <item>Remote Control</item>
+        <item>Televison</item>
+        <item>Televison Parts</item>
+        <item>Toner/Ink Cartridge</item>
+        <item>Washing Machine</item>
+        <item>Wires</item>
+
+    </string-array>
+</resources>
