@@ -17,6 +17,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
+
 public class NewListingActivity extends AppCompatActivity {
 
     private TextView smallButton, mediumButton, largeButton, extraLargeButton;
@@ -85,6 +89,33 @@ public class NewListingActivity extends AppCompatActivity {
                 extraLargeButton.setBackgroundResource(R.drawable.selling_size_selected);
                 extraLargeButton.setTextColor(Color.parseColor("#FFFFFF"));
 
+            }
+        });
+
+        findViewById(R.id.sellingpage_photo2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SuperActivityToast.create(NewListingActivity.this, new Style(), Style.TYPE_BUTTON)
+                        .setText(Constants.NOT_YET_IMPLEMENTED + "Allow user to upload multiple photos.").setDuration(Style.DURATION_LONG).setFrame(Style.FRAME_LOLLIPOP)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PURPLE)).setAnimations(Style.ANIMATIONS_POP).show();
+            }
+        });
+
+        findViewById(R.id.sellingpage_photo3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SuperActivityToast.create(NewListingActivity.this, new Style(), Style.TYPE_BUTTON)
+                        .setText(Constants.NOT_YET_IMPLEMENTED + "Allow user to upload multiple photos.").setDuration(Style.DURATION_LONG).setFrame(Style.FRAME_LOLLIPOP)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PURPLE)).setAnimations(Style.ANIMATIONS_POP).show();
+            }
+        });
+
+        findViewById(R.id.sellingpage_photo4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SuperActivityToast.create(NewListingActivity.this, new Style(), Style.TYPE_BUTTON)
+                        .setText(Constants.NOT_YET_IMPLEMENTED + "Allow user to upload multiple photos.").setDuration(Style.DURATION_LONG).setFrame(Style.FRAME_LOLLIPOP)
+                        .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PURPLE)).setAnimations(Style.ANIMATIONS_POP).show();
             }
         });
 

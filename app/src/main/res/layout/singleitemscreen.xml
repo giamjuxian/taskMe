@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/singleitem_mainImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sample2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/singleitem_backImageView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/backtag"
+            android:tint="#ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/singleitem_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/contact_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:text="CONTACT"
+            android:textColor="@color/primarygreen"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/singleitem_offer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singleitem_mainImage" />
+
+        <TextView
+            android:id="@+id/singleitem_offer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/offer_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:text="OFFER"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/singleitem_contact"
+            app:layout_constraintTop_toTopOf="@+id/singleitem_contact" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/verylightgray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_contact" />
+
+        <ImageView
+            android:id="@+id/singleitem_profile"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/nav_myprofile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <TextView
+            android:id="@+id/singleitem_profileNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="Ryan Koh"
+            android:textColor="#000000"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/singleitem_profile"
+            app:layout_constraintStart_toEndOf="@+id/singleitem_profile"
+            app:layout_constraintTop_toTopOf="@+id/singleitem_profile" />
+
+        <TextView
+            android:id="@+id/singleitem_titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Small Computer Mouse"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_profile" />
+
+        <TextView
+            android:id="@+id/singleitem_descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="I need something to do. Can you do something for me?"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_titleTextView" />
+
+
+
+        <ImageView
+            android:id="@+id/singleitem_location"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/location"
+            android:layout_marginLeft="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="@id/singleitem_descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_descriptionTextView"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/singleitem_locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primarygreendark"
+            android:text="Clementi Avenue 2"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/singleitem_location"
+            app:layout_constraintTop_toTopOf="@id/singleitem_location"
+            app:layout_constraintBottom_toBottomOf="@id/singleitem_location"
+            />
+
+
+        <ImageView
+            android:id="@+id/singleitem_money"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/money"
+            android:layout_marginLeft="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="@id/singleitem_descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_locationTextView"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/singleitem_moneyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primarygreendark"
+            android:text="$15"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/singleitem_money"
+            app:layout_constraintTop_toTopOf="@id/singleitem_money"
+            app:layout_constraintBottom_toBottomOf="@id/singleitem_money"
+            />
+
+        <ImageView
+            android:id="@+id/singleitem_timer"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/timer"
+            android:layout_marginLeft="@dimen/_40sdp"
+            app:layout_constraintStart_toEndOf="@id/singleitem_moneyTextView"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_locationTextView"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/singleitem_timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="23 Oct 2018 4pm-6pm"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/singleitem_timer"
+            app:layout_constraintTop_toTopOf="@id/singleitem_timer"
+            app:layout_constraintBottom_toBottomOf="@id/singleitem_timer"
+            />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/verylightgray"
+            app:layout_constraintStart_toStartOf="@id/singleitem_descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_moneyTextView" />
+
+        <TextView
+            android:id="@+id/singleitem_shareThisJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHARE THIS JOB"
+            app:layout_constraintStart_toStartOf="@id/singleitem_descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_moneyTextView"
+            android:layout_marginTop="@dimen/_30sdp"/>
+
+        <ImageView
+            android:id="@+id/singleItem_facebook"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/facebook2"
+            app:layout_constraintStart_toStartOf="@id/singleitem_shareThisJob"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_shareThisJob"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/singleItem_whatsapp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/whatsapp2"
+            app:layout_constraintStart_toEndOf="@id/singleItem_facebook"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_shareThisJob"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/singleItem_share"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/share"
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@id/singleItem_whatsapp"
+            app:layout_constraintTop_toBottomOf="@id/singleitem_shareThisJob"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/singleItem_whatsapp"/>
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
