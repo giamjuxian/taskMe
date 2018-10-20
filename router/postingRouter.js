@@ -8,18 +8,16 @@ postingRouter.get('/', function (req, res) {
     res.send('Posting Test');
 })
 
-postingRouter.post('/get-nearby-posting', function(req, res) {
+postingRouter.post('/get-nearby-posting', function (req, res) {
     var currentLatitude = req.body.position.latitude;
     var currentLongtitude = req.body.position.longtitude;
     var distance = req.body.distance
 
     postingService.getNearbyPosting(currentLatitude, currentLongtitude, distance, function (err, postings) {
         if (err) {
-            res.status(404).send({ error: err })
+            return res.status(404).send({ error: err.message })
         }
-        res.status(200).send({
-            postings: postings
-        })
+        return res.status(200).json({ postings: postings })
     })
 })
 
@@ -37,16 +35,12 @@ postingRouter.post('/add-posting', function (req, res) {
     postingService.addPosting(title, description, latitude, longtitude, startTime, endTime
         , priceAmount, postedById, postedByName, function (err, posting) {
             if (err) {
-                res.status(404).send({
-                    error: {
-                        message: "Error in adding posting."
-                    }
-                })
+                return res.status(404).send({ error: err.message })
             }
-            console.log("====== POSTING " + posting._id + " HAS BEEN SUCCESSFULLY ADDED");
-            res.status(200).send({
+            console.log("====== POSTING '" + posting.title + "' HAS BEEN SUCCESSFULLY ADDED");
+            return res.status(200).json({
                 success: {
-                    message: "Posting has been added successfully."
+                    message: "Posting '" + posting.title + "' has been successfully added"
                 }
             })
         })

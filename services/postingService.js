@@ -29,9 +29,7 @@ exports.addPosting = function(title, description, latitude, longtitude,
     }
 
     Postings.create(newPosting, function (err, posting) {
-        if (err) {
-            return callback(err);
-        }
+        if (err) return callback(err);
         return callback(null, newPosting);
     })
 }
@@ -42,7 +40,6 @@ exports.getNearbyPosting = function (latitude, longtitude, distance, callback) {
     Postings.where('location.coordinates').within({ center: center, radius: radius, unique: true, spherical: true }).exec(
         function(err, postings) {
             if (err) return callback(err);
-            console.log(postings);
             return callback(null, postings);
         }
     );
