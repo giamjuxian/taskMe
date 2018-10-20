@@ -26,8 +26,6 @@ db.once('open', function () {
 	console.log("Connected to database");
 });
 
-
-
 var server = app.listen(3000, function () {
 	console.log("");
 	console.log("Listening on http://localhost:3000");
