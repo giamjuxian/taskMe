@@ -1,0 +1,23 @@
+{
+  "name": "clutch",
+  "version": "1.0.0",
+  "description": "()\u001b[DQuick Jobs on Demand)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giamjuxian/clutch.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/giamjuxian/clutch/issues"
+  },
+  "homepage": "https://github.com/giamjuxian/clutch#readme",
+  "dependencies": {
+    "mongoose": "^5.3.4"
+  }
+}
