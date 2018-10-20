@@ -1,6 +1,7 @@
 package com.ateam.codeathon;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
@@ -128,6 +129,7 @@ public class NewListingActivity extends AppCompatActivity {
             public void run() {
                 progress.cancel();
                 Toast.makeText(NewListingActivity.this, "Successfully posted!", Toast.LENGTH_SHORT).show();
+                setResult(RESULT_OK);
                 finish();
             }
         };

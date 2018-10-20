@@ -25,6 +25,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -206,6 +207,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
+        // coming back from newlistingactivity.java
+        if (requestCode == 1010) {
+            switch (resultCode) {
+                case Activity.RESULT_OK:
+                    Log.e("ddd", "ggg");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     @Override
@@ -363,6 +374,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         findViewById(R.id.searchword).setVisibility(View.VISIBLE);
         findViewById(R.id.searchLayout).setVisibility(View.VISIBLE);
 
+        for(int i = 6; i <= Utils.getNumberOfItemPosted(this); i++) {
+            switch (i) {
+                case 6:
+                    findViewById(R.id.item6).setVisibility(View.VISIBLE);
+                    break;
+                case 7:
+                    findViewById(R.id.item7).setVisibility(View.VISIBLE);
+                    break;
+                case 8:
+                    findViewById(R.id.item8).setVisibility(View.VISIBLE);
+                    break;
+            }
+        }
+
 
         Spinner spinner = (Spinner) findViewById(R.id.searchspinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -377,6 +402,54 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         adapter2.setDropDownViewResource(R.layout.searchspinner);
         spinner2.setAdapter(adapter2);
         spinner2.setSelection(0);
+    }
+
+    public void newItemPosted(String name, String title, ImageView image,
+                                     String price, String time, String address) {
+        int nameId, titleId, imageId, priceId, timeId, addressId;
+        switch (Utils.getNumberOfItemPosted(this)) {
+            case 6:
+                nameId = R.id.profilenametextview_item6;
+                titleId = R.id.titletextview_item6;
+                imageId = R.id.mainimageview_item6;
+                priceId = R.id.pricetextview_item6;
+                timeId = R.id.timerequired_item6;
+                addressId = R.id.locationtextview_item6;
+                findViewById(R.id.item6).setVisibility(View.VISIBLE);
+                break;
+            case 7:
+                nameId = R.id.profilenametextview_item7;
+                titleId = R.id.titletextview_item7;
+                imageId = R.id.mainimageview_item7;
+                priceId = R.id.pricetextview_item7;
+                timeId = R.id.timerequired_item7;
+                addressId = R.id.locationtextview_item7;
+                findViewById(R.id.item7).setVisibility(View.VISIBLE);
+                break;
+            case 8:
+                nameId = R.id.profilenametextview_item8;
+                titleId = R.id.titletextview_item8;
+                imageId = R.id.mainimageview_item8;
+                priceId = R.id.pricetextview_item8;
+                timeId = R.id.timerequired_item8;
+                addressId = R.id.locationtextview_item8;
+                findViewById(R.id.item8).setVisibility(View.VISIBLE);
+                break;
+                default:
+                    nameId = R.id.profilenametextview_item8;
+                    titleId = R.id.titletextview_item8;
+                    imageId = R.id.mainimageview_item8;
+                    priceId = R.id.pricetextview_item8;
+                    timeId = R.id.timerequired_item8;
+                    addressId = R.id.locationtextview_item8;
+        }
+
+        ((TextView) findViewById(nameId)).setText(name);
+        ((TextView) findViewById(titleId)).setText(title);
+        ((ImageView) findViewById(imageId)).setImageResource(imageId);
+        ((TextView) findViewById(priceId)).setText(price);
+        ((TextView) findViewById(timeId)).setText(time);
+        ((TextView) findViewById(addressId)).setText(address);
     }
 }
 
