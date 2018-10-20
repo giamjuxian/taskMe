@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    id: {
+    _id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
@@ -25,4 +25,5 @@ var userSchema = new Schema({
     timestamps: true
 });
 
-module.exports = User;
+var Users = mongoose.model('User', userSchema);
+module.exports = Users;
