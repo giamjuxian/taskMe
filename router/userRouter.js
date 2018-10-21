@@ -1,30 +1,20 @@
 'use strict'
 
 var express = require('express');
-var mongoose = require('mongoose');
-var Users = require('../model/user');
-var ObjectID = require('mongodb').ObjectID;
+var userService = require('../services/userService');
 var userRouter = express.Router();
 
-userRouter.get('/', function (req, res) {
-    res.send('user router Test');
-})
-
-userRouter.get('/about', function (req, res) {
-    res.send('This is a user router test');
-})
-
-userRouter.get('/add', function (req, res) {
-    let testUser = {
-        _id: new ObjectID(),
-        name: "ADDISON",
-        phoneNumber: "91234567"
-    };
-
-    Users.create(testUser, function (err, user) {
-        if (err) return console.error(err);
-        console.log("USER " + user.name + " CREATED");
-        res.send("COMPLETED YO");
+userRouter.post('/add-user', function (req, res) {
+    var name = req.body.name;
+    var phoneNumber = req.body.phoneNumber;
+    userService.addUser(name, phoneNumber, function (err, user) {
+        if (err) return res.status(404).send({ error: err.message })
+        console.log("====== USER '" + user.name + "' HAS BEEN SUCCESSFULLY ADDED");
+        return res.status(200).json({
+            success: {
+                message: "User '" + user.name + "' has been sucessfully added"
+            }
+        })
     })
 })
 

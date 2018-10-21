@@ -1,4 +1,5 @@
 'use strict'
+
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var User = require('./user');
@@ -54,6 +55,19 @@ var postingSchema = new Schema({
         name: {
             type: String
         }
+    },
+    takenBy : {
+        _id: {
+            type: mongoose.Schema.Types.ObjectId,
+        },
+        name: {
+            type: String
+        }
+    },
+    status : {
+        type : String,
+        enum: ["AVAILABLE", "TAKEN", "COMPLETED"],
+        default : "AVAILABLE"
     }
 }, {
         timestamps: true
