@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -16,12 +17,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -40,14 +39,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.theartofdev.edmodo.cropper.CropImage;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigation_view;
@@ -55,23 +53,26 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private Random rand;
     private boolean searchClicked = false;
 
-    int imageIdResource [] = {R.drawable.sample1, R.drawable.sample2, R.drawable.sample3, R.drawable.sample4, R.drawable.sample5,
+    int imageIdResource [] = {R.drawable.hdbroom, R.drawable.dogstock, R.drawable.pizzastock, R.drawable.chipsstock, R.drawable.hdb2,
             R.drawable.sample1, R.drawable.sample1, R.drawable.sample1,};
     CharSequence profileName [] = {"", "", "", "", "", "", "", ""};
     CharSequence title [] = {"", "", "", "", "", "", "", ""};
-    CharSequence desc [] = {"Desc 1", "Desc 2", "desc3 ", "desc4", "desc5", "6", "7", "8"};
+    CharSequence desc [] = {"Need help to clean my living room! For 3 hrs, I will be paying $60. It will be on October 25 4pm-7pm. Let me know if you are interested!",
+            "Need your help to walk my dog as I have been very busy recently. He is very obedient, and will not bark at other people. Pleasant dog!",
+            "Teach me to make pizza! I want to learn to make pizza for my girlfriend. I am looking at Cheese Pizza. Let me know if you are interested!",
+            "I am craving for potato chips. Please get me Lays Barbeque chips. 2 big pack. Willing to pay you $5 on top of the price for the chips.",
+            "Clean my kitchen for me. It is a typical HDB 4-room flat kitchen size. Job is on October 26 2-6pm. Willing to pay $60 for the whole duration.", "6", "7", "8"};
     CharSequence price [] = {"", "", "", "", "", "", "", ""};
     CharSequence location [] = {"", "", "", "", "", "", "", ""};
     CharSequence timing [] = {"", "", "", "", "", "", "", ""};
     int[] imageId = {R.id.mainimageview_item1, R.id.mainimageview_item2, R.id.mainimageview_item3, R.id.mainimageview_item4, R.id.mainimageview_item5,
-            R.id.mainimageview_item1, R.id.mainimageview_item1, R.id.mainimageview_item1,};
+            R.id.mainimageview_item6, R.id.mainimageview_item7, R.id.mainimageview_item8,};
     int[] contactId = {R.id.contact_item1, R.id.contact_item2, R.id.contact_item3, R.id.contact_item4, R.id.contact_item5,
-            R.id.contact_item1, R.id.contact_item1, R.id.contact_item1};
+            R.id.contact_item6, R.id.contact_item7, R.id.contact_item8};
     int[] titleId = {R.id.titletextview_item1, R.id.titletextview_item2, R.id.titletextview_item3, R.id.titletextview_item4, R.id.titletextview_item5,
-            R.id.titletextview_item1, R.id.titletextview_item1, R.id.titletextview_item1};
+            R.id.titletextview_item6, R.id.titletextview_item7, R.id.titletextview_item8};
 
-
-
+    String [] imagePath = {"", "", "", "", "", "", "", ""};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,25 +83,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         setupNavigation();
 
         rand = new Random();
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-            if (ActivityCompat.checkSelfPermission
-                    (this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    &&
-                    ActivityCompat.checkSelfPermission
-                            (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
-            {
-                requestPermissions(new String[]{
-                        Manifest.permission.ACCESS_COARSE_LOCATION,
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                }, 1); // 1 is requestCode
-                return;
-
-            }
-        }
-        setUpMap();
-        mapSpinner();
 
         setAllBottomIconToGray();
         setImageToSelected(R.id.homepage_home);
@@ -114,7 +96,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PINK)).setAnimations(Style.ANIMATIONS_POP).show();
             }
         });
+        setUpMap();
+        mapSpinner();
     }
+
 
     private void setupActionBar() {
         findViewById(R.id.homePageHamburger).setOnClickListener(new View.OnClickListener() {
@@ -143,8 +128,38 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(1.358639,103.84525299999996) , 14.0f) );
         addMapMarker();
+
+        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(1.2966,103.7764) , 14.0f) );
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.setOnMarkerClickListener(this);
+
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+                if (ActivityCompat.checkSelfPermission
+                        (this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                        &&
+                        ActivityCompat.checkSelfPermission
+                                (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                {
+                    requestPermissions(new String[]{
+                            Manifest.permission.ACCESS_COARSE_LOCATION,
+                            Manifest.permission.ACCESS_FINE_LOCATION
+                    }, 1); // 1 is requestCode
+                    return;
+
+                }
+            }
+            return;
+        }
+
+        mMap.setMyLocationEnabled(true);
     }
 
     private void mapSpinner() {
@@ -161,12 +176,35 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0) {
-                    removeMapMarker();
-                    addMapMarker();
-                } else {
-                    removeMapMarker();
-                    addListingMarker();
+                switch (position) {
+                    case 0:
+                        removeMapMarker();
+                        addMapMarker();
+                        break;
+                    case 1:
+                        removeMapMarker();
+                        addBabySittingMarker();
+                        break;
+                    case 2:
+                        removeMapMarker();
+                        addCleaningMarker();
+                        break;
+                    case 3:
+                        removeMapMarker();
+                        addCookingMarker();
+                        break;
+                    case 4:
+                        removeMapMarker();
+                        addGroceryShoppingMarker();
+                        break;
+                    case 5:
+                        removeMapMarker();
+                        addPetsMarker();
+                        break;
+                    case 6:
+                        removeMapMarker();
+                        addOthersMarker();
+                        break;
                 }
             }
 
@@ -175,44 +213,80 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         });
-
     }
 
     private void addMapMarker() {
-        addGreenMarker();
-        addRedMarker();
+        addBabySittingMarker();
+        addCleaningMarker();
+        addCookingMarker();
+        addGroceryShoppingMarker();
+        addPetsMarker();
+        addOthersMarker();
     }
 
     private void removeMapMarker() {
         mMap.clear();
     }
 
-    private void addListingMarker() {
-        for(int i = 0; i < 100; i++) {
-            mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.listingicon)));
-        }
-    }
 
     private float randomFloat(float min, float max) {
         return rand.nextFloat() * (max - min) + min;
 
     }
 
-    private void addGreenMarker() {
-        for(int i = 0; i < 150; i++) {
-            mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.recycgreen)));
-        }
+    private void addBabySittingMarker() {
+        for(int i = 0; i < 20; i++) {
+            Marker marker =
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.baby)));
+            marker.setTag(Category.BABY_SITTING);
 
+        }
     }
 
-    private void addRedMarker() {
-        for(int i = 0; i < 60; i++) {
-            mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.recycred)));
+    private void addCleaningMarker() {
+        for(int i = 0; i < 30; i++) {
+            Marker marker =
+                mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.cleaning)));
+            marker.setTag(Category.CLEANING);
         }
+    }
 
+    private void addCookingMarker() {
+        for(int i = 0; i < 30; i++) {
+            Marker marker =
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.cooking)));
+            marker.setTag(Category.COOKING);
+        }
+    }
+
+    private void addGroceryShoppingMarker() {
+        for(int i = 0; i < 30; i++) {
+            Marker marker =
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.shopping)));
+            marker.setTag(Category.GROCERY_SHOPPING);
+        }
+    }
+
+    private void addPetsMarker() {
+        for(int i = 0; i < 30; i++) {
+            Marker marker =
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.dog)));
+            marker.setTag(Category.WALK_PETS);
+        }
+    }
+
+    private void addOthersMarker() {
+        for(int i = 0; i < 30; i++) {
+            Marker marker =
+                    mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.other)));
+            marker.setTag(Category.OTHERS);
+        }
     }
 
     @Override
@@ -242,7 +316,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if (requestCode == 1010) {
             switch (resultCode) {
                 case Activity.RESULT_OK:
-                    Log.e("ddd", "ggg");
                     setImageToSelected(R.id.homepage_home);
                     removeSearchLayout();
                     break;
@@ -261,9 +334,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
                 }
                 else {
-                    // permission granted do
 
+                }
+                break;
 
+            case 2:
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED){
+                    setImageToSelected(R.id.homepage_home);
+                    removeSearchLayout();
+                }
+                else {
+                    setImageToSelected(R.id.homepage_sell);
+                    removeSearchLayout();
+                    sell();
                 }
                 break;
         }
@@ -453,19 +536,56 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         findViewById(R.id.searchLayout).setVisibility(View.VISIBLE);
 
         for(int i = 6; i <= Utils.getNumberOfItemPosted(this); i++) {
+            String title2= "title" + i;
+            String profileName2= "profileName" + i;
+            String description2 = "description" + i;
+            String price2 = "price" + i;
+            String location2 = "location" + i;
+            String timing2 = "timing" + i;
+            String imagePath2 = "imagePath" + i;
+
+            title[i - 1] = Utils.getListing(title2,MainActivity.this);
+            profileName[i - 1] = Utils.getListing(profileName2,MainActivity.this);
+            price[i - 1] = Utils.getListing(price2,MainActivity.this);
+            location[i - 1] = Utils.getListing(location2,MainActivity.this);
+            timing[i-1] = Utils.getListing(timing2,MainActivity.this);
+            desc[i-1] = Utils.getListing(description2,MainActivity.this);
+            imagePath[i-1] = Utils.getListing(imagePath2,MainActivity.this);
+
+            newItemPosted(i, (String) profileName[i-1], (String) title[i-1], (String) price[i-1], (String) timing[i-1], (String) location[i-1]);
+Log.e("ddd", "gg " + imagePath[i-1]);
+Log.e("ddd", "gg2 " + Utils.getListing(imagePath2,MainActivity.this));
             switch (i) {
                 case 6:
                     findViewById(R.id.item6).setVisibility(View.VISIBLE);
+//                    String title= "title" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String profileName= "profileName" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String description= "description" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String price= "price" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String location= "location" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String timing= "timing" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    String imagePath= "imagePath" + Utils.getNumberOfItemPosted(MainActivity.this);
+//                    ((TextView) findViewById(R.id.profilenametextview_item6)).setText(Utils.getListing(profileName, MainActivity.this));
+//                    ((TextView) findViewById(R.id.titletextview_item6)).setText(Utils.getListing(title, MainActivity.this));
+//                    desc[5] = Utils.getListing(description, MainActivity.this);
+//                    ((TextView) findViewById(R.id.pricetextview_item6)).setText(Utils.getListing(price, MainActivity.this));
+//                    ((TextView) findViewById(R.id.locationtextview_item6)).setText(Utils.getListing(location, MainActivity.this));
+//                    ((TextView) findViewById(R.id.timerequired_item6)).setText(Utils.getListing(timing, MainActivity.this));
+                    ((ImageView) findViewById(R.id.mainimageview_item6)).setImageURI(Uri.parse(imagePath[i-1]));
+
                     break;
                 case 7:
                     findViewById(R.id.item7).setVisibility(View.VISIBLE);
+                    ((ImageView) findViewById(R.id.mainimageview_item7)).setImageURI(Uri.parse(imagePath[i-1]));
                     break;
                 case 8:
                     findViewById(R.id.item8).setVisibility(View.VISIBLE);
+                    ((ImageView) findViewById(R.id.mainimageview_item8)).setImageURI(Uri.parse(imagePath[i-1]));
+
                     break;
             }
         }
-
+Log.e("ddd", "g: " + Utils.getNumberOfItemPosted(this));
         for(int i = 0; i < Utils.getNumberOfItemPosted(this); i++) {
             final int k = i;
             switch (i) {
@@ -475,7 +595,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     price[i] = ((TextView) findViewById(R.id.pricetextview_item1)).getText();
                     location[i] = ((TextView) findViewById(R.id.locationtextview_item1)).getText();
                     timing[i] = ((TextView) findViewById(R.id.timerequired_item1)).getText();
-                    imageIdResource[i] = R.drawable.sample1;
+                    imageIdResource[i] = R.drawable.hdbroom;
                     break;
                 case 1:
                     title[i] = ((TextView) findViewById(titleId[i])).getText();
@@ -483,7 +603,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     price[i] = ((TextView) findViewById(R.id.pricetextview_item2)).getText();
                     location[i] = ((TextView) findViewById(R.id.locationtextview_item2)).getText();
                     timing[i] = ((TextView) findViewById(R.id.timerequired_item2)).getText();
-                    imageIdResource[i] = R.drawable.sample2;
+                    imageIdResource[i] = R.drawable.dogstock;
                     break;
                 case 2:
                     title[i] = ((TextView) findViewById(titleId[i])).getText();
@@ -491,7 +611,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     price[i] = ((TextView) findViewById(R.id.pricetextview_item3)).getText();
                     location[i] = ((TextView) findViewById(R.id.locationtextview_item3)).getText();
                     timing[i] = ((TextView) findViewById(R.id.timerequired_item3)).getText();
-                    imageIdResource[i] = R.drawable.sample3;
+                    imageIdResource[i] = R.drawable.pizzastock;
                     break;
                 case 3:
                     title[i] = ((TextView) findViewById(titleId[i])).getText();
@@ -499,7 +619,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     price[i] = ((TextView) findViewById(R.id.pricetextview_item4)).getText();
                     location[i] = ((TextView) findViewById(R.id.locationtextview_item4)).getText();
                     timing[i] = ((TextView) findViewById(R.id.timerequired_item4)).getText();
-                    imageIdResource[i] = R.drawable.sample4;
+                    imageIdResource[i] = R.drawable.chipsstock;
                     break;
                 case 4:
                     title[i] = ((TextView) findViewById(titleId[i])).getText();
@@ -507,7 +627,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     price[i] = ((TextView) findViewById(R.id.pricetextview_item5)).getText();
                     location[i] = ((TextView) findViewById(R.id.locationtextview_item5)).getText();
                     timing[i] = ((TextView) findViewById(R.id.timerequired_item5)).getText();
-                    imageIdResource[i] = R.drawable.sample5;
+                    imageIdResource[i] = R.drawable.hdb2;
                     break;
                 case 5:
 
@@ -539,6 +659,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     intent.putExtra("location", location[k]);
                     intent.putExtra("timing", timing[k]);
                     intent.putExtra("imageId", imageIdResource[k]);
+                    intent.putExtra("imagePath", k + 1);
                     Log.e("ddd", "before: " + profileName[k]);
                     startActivity(intent);
                 }
@@ -555,6 +676,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     intent.putExtra("location", location[k]);
                     intent.putExtra("timing", timing[k]);
                     intent.putExtra("imageId", imageIdResource[k]);
+                    intent.putExtra("imagePath", k + 1);
                     Log.e("ddd", "before: " + profileName[k]);
                     startActivity(intent);
                 }
@@ -586,10 +708,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         spinner2.setSelection(0);
     }
 
-    public void newItemPosted(String name, String title, ImageView image,
+    public void newItemPosted(int index, String name, String title,
                                      String price, String time, String address) {
         int nameId, titleId, imageId, priceId, timeId, addressId;
-        switch (Utils.getNumberOfItemPosted(this)) {
+        switch (index) {
             case 6:
                 nameId = R.id.profilenametextview_item6;
                 titleId = R.id.titletextview_item6;
@@ -633,6 +755,226 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         ((TextView) findViewById(timeId)).setText(time);
         ((TextView) findViewById(addressId)).setText(address);
     }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        Category category = (Category) marker.getTag();
+        Intent intent = new Intent(MainActivity.this, SingleItemActivity.class);
+        TempInfo tempInfo = new TempInfo(Category.COOKING,rand.nextInt(TempInfo.size));
+        switch (category) {
+            case COOKING:
+                tempInfo = new TempInfo(Category.COOKING,rand.nextInt(TempInfo.size));
+                break;
+            case BABY_SITTING:
+                tempInfo = new TempInfo(Category.BABY_SITTING,rand.nextInt(TempInfo.size));
+                break;
+            case CLEANING:
+                tempInfo = new TempInfo(Category.CLEANING,rand.nextInt(TempInfo.size));
+                break;
+            case GROCERY_SHOPPING:
+                tempInfo = new TempInfo(Category.GROCERY_SHOPPING,rand.nextInt(TempInfo.size));
+                break;
+            case WALK_PETS:
+                tempInfo = new TempInfo(Category.WALK_PETS,rand.nextInt(TempInfo.size));
+                break;
+            case OTHERS:
+                tempInfo = new TempInfo(Category.OTHERS,rand.nextInt(TempInfo.size));
+                break;
+        }
+
+        intent.putExtra("profileName", tempInfo.getProfileName());
+        intent.putExtra("title", tempInfo.getTitle());
+        intent.putExtra("desc", tempInfo.getDesc());
+        intent.putExtra("price", tempInfo.getPrice());
+        intent.putExtra("location", tempInfo.getLocation());
+        intent.putExtra("timing", tempInfo.getTiming());
+        intent.putExtra("imageId", tempInfo.getImageId());
+        startActivity(intent);
+        return false;
+    }
 }
 
+class TempInfo {
+    String [] profileName = {"Addison Ho"};
+    String [] title = {"Need help to learn how to cook!"};
+    String [] desc = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] price = {"$50"};
+    String [] location = {"41 Clementi Avenue 1"};
+    String [] timing = {"October 21 2-4pm"};
+    int [] imageId = {R.drawable.pasta};
 
+    String [] profileNameBaby = {"Addison Ho"};
+    String [] titleBaby = {"Need help to learn how to cook!"};
+    String [] descBaby = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] priceBaby = {"$50"};
+    String [] locationBaby = {"41 Clementi Avenue 1"};
+    String [] timingBaby = {"October 21 2-4pm"};
+    int [] imageIdBaby = {R.drawable.pasta};
+
+    String [] profileNameCleaning = {"Addison Ho"};
+    String [] titleCleaning = {"Need help to learn how to cook!"};
+    String [] descCleaning = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] priceCleaning = {"$50"};
+    String [] locationCleaning = {"41 Clementi Avenue 1"};
+    String [] timingCleaning = {"October 21 2-4pm"};
+    int [] imageIdCleaning = {R.drawable.pasta};
+
+    String [] profileNameShopping = {"Addison Ho"};
+    String [] titleShopping = {"Need help to learn how to cook!"};
+    String [] descShopping = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] priceShopping = {"$50"};
+    String [] locationShopping = {"41 Clementi Avenue 1"};
+    String [] timingShopping = {"October 21 2-4pm"};
+    int [] imageIdShopping = {R.drawable.pasta};
+
+    String [] profileNamePets = {"Addison Ho"};
+    String [] titlePets = {"Need help to learn how to cook!"};
+    String [] descPets = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] pricePet = {"$50"};
+    String [] locationPets = {"41 Clementi Avenue 1"};
+    String [] timingPets = {"October 21 2-4pm"};
+    int [] imageIdPets = {R.drawable.pasta};
+
+    String [] profileNameOthers = {"Addison Ho"};
+    String [] titleOthers = {"Need help to learn how to cook!"};
+    String [] descOthers = {"I want to learn how to cook pasta for my girlfriend. Please assist!"};
+    String [] priceOthers = {"$50"};
+    String [] locationOthers = {"41 Clementi Avenue 1"};
+    String [] timingOthers = {"October 21 2-4pm"};
+    int [] imageIdOthers = {R.drawable.pasta};
+    public static int size = 1;
+
+    private int id;
+    private Category category;
+
+    public TempInfo(Category type, int id) {
+        this.id = id;
+        this.category = type;
+    }
+
+    public String getProfileName() {
+        switch (category) {
+            case COOKING:
+                return profileName[id];
+            case BABY_SITTING:
+                return profileNameBaby[id];
+            case CLEANING:
+                return profileNameCleaning[id];
+            case WALK_PETS:
+                return profileNamePets[id];
+            case GROCERY_SHOPPING:
+                return profileNameShopping[id];
+            case OTHERS:
+                return profileNameOthers[id];
+        }
+        return profileName[id];
+    }
+
+    public String getTitle() {
+        switch (category) {
+            case COOKING:
+                return title[id];
+            case BABY_SITTING:
+                return titleBaby[id];
+            case CLEANING:
+                return titleCleaning[id];
+            case WALK_PETS:
+                return titlePets[id];
+            case GROCERY_SHOPPING:
+                return titleShopping[id];
+            case OTHERS:
+                return titleOthers[id];
+        }
+        return title[id];
+    }
+
+    public String getDesc() {
+        switch (category) {
+            case COOKING:
+                return desc[id];
+            case BABY_SITTING:
+                return descBaby[id];
+            case CLEANING:
+                return descCleaning[id];
+            case WALK_PETS:
+                return descPets[id];
+            case GROCERY_SHOPPING:
+                return descShopping[id];
+            case OTHERS:
+                return descOthers[id];
+        }
+        return desc[id];
+    }
+
+    public String getPrice() {
+        switch (category) {
+            case COOKING:
+                return price[id];
+            case BABY_SITTING:
+                return priceBaby[id];
+            case CLEANING:
+                return priceCleaning[id];
+            case WALK_PETS:
+                return pricePet[id];
+            case GROCERY_SHOPPING:
+                return priceShopping[id];
+            case OTHERS:
+                return priceOthers[id];
+        }
+        return price[id];
+    }
+
+    public String getLocation() {
+        switch (category) {
+            case COOKING:
+                return location[id];
+            case BABY_SITTING:
+                return locationBaby[id];
+            case CLEANING:
+                return locationCleaning[id];
+            case WALK_PETS:
+                return locationPets[id];
+            case GROCERY_SHOPPING:
+                return locationShopping[id];
+            case OTHERS:
+                return locationOthers[id];
+        }
+        return location[id];
+    }
+
+    public String getTiming() {
+        switch (category) {
+            case COOKING:
+                return timing[id];
+            case BABY_SITTING:
+                return timingBaby[id];
+            case CLEANING:
+                return timingCleaning[id];
+            case WALK_PETS:
+                return timingPets[id];
+            case GROCERY_SHOPPING:
+                return timingShopping[id];
+            case OTHERS:
+                return timingOthers[id];
+        }
+        return timing[id];
+    }
+
+    public int getImageId() {
+        switch (category) {
+            case COOKING:
+                return imageId[id];
+            case BABY_SITTING:
+                return imageIdBaby[id];
+            case CLEANING:
+                return imageIdCleaning[id];
+            case WALK_PETS:
+                return imageIdPets[id];
+            case GROCERY_SHOPPING:
+                return imageIdShopping[id];
+            case OTHERS:
+                return imageIdOthers[id];
+        }
+        return imageId[id];
+    }
+}

@@ -1,6 +1,8 @@
 package com.ateam.codeathon;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,7 +39,13 @@ public class SingleItemActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.singleitem_locationTextView)).setText(intent.getExtras().getString("location"));
         ((TextView) findViewById(R.id.singleitem_timerTextView)).setText(intent.getExtras().getString("timing"));
         ((ImageView) findViewById(R.id.singleitem_mainImage)).setImageResource(intent.getExtras().getInt("imageId"));
+        int id = intent.getExtras().getInt("imagePath");
 
+        if(Utils.getNumberOfItemPosted(SingleItemActivity.this) > 5 && id > 5) {
+            String imagePath2 = "imagePath" + id;
+            String path = Utils.getListing(imagePath2,SingleItemActivity.this);
+            ((ImageView) findViewById(R.id.singleitem_mainImage)).setImageURI(Uri.parse(path));
+        }
         findViewById(R.id.singleitem_contact).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

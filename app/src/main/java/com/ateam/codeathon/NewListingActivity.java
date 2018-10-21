@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,13 +25,15 @@ import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
 public class NewListingActivity extends AppCompatActivity {
 
     private TextView smallButton, mediumButton, largeButton, extraLargeButton;
+    private EditText titleEditText, descEditText, priceEditText, timeEditText, locationEditText;
+    private Uri imgUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selling_page);
 
-        Uri imgUri=Uri.parse(getIntent().getStringExtra("imageUri"));
+        imgUri=Uri.parse(getIntent().getStringExtra("imageUri"));
         ImageView imageView = findViewById(R.id.selling_coverphoto);
         imageView.setImageURI(imgUri);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
@@ -40,6 +43,12 @@ public class NewListingActivity extends AppCompatActivity {
         largeButton = findViewById(R.id.selling_largeButton);
         extraLargeButton = findViewById(R.id.selling_extralargeButton);
         initializeSpinner();
+
+        titleEditText = findViewById(R.id.selling_titleEditText);
+        descEditText = findViewById(R.id.selling_descEditText);
+        priceEditText = findViewById(R.id.selling_priceEditText);
+        timeEditText = findViewById(R.id.selling_timeEditText);
+        locationEditText = findViewById(R.id.selling_meetUpEditText);
 
         findViewById(R.id.selling_back).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,6 +167,21 @@ public class NewListingActivity extends AppCompatActivity {
 
             @Override
             public void run() {
+                Utils.setNumberOfItemPosted(NewListingActivity.this, Utils.getNumberOfItemPosted(NewListingActivity.this) + 1);
+                String title= "title" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String profileName= "profileName" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String desc= "description" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String price= "price" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String location= "location" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String timing= "timing" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                String imagePath= "imagePath" + Utils.getNumberOfItemPosted(NewListingActivity.this);
+                Utils.setListing(imagePath, NewListingActivity.this, imgUri.toString());
+                Utils.setListing(title, NewListingActivity.this, titleEditText.getText().toString());
+                Utils.setListing(profileName, NewListingActivity.this, "Team Clutch");
+                Utils.setListing(desc, NewListingActivity.this, descEditText.getText().toString());
+                Utils.setListing(price, NewListingActivity.this, priceEditText.getText().toString());
+                Utils.setListing(location, NewListingActivity.this, locationEditText.getText().toString());
+                Utils.setListing(timing, NewListingActivity.this, timeEditText.getText().toString());
                 progress.cancel();
                 Toast.makeText(NewListingActivity.this, "Successfully posted!", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_OK);

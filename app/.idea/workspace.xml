@@ -6,28 +6,19 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ddd" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0f2aee-cbfa-4faa-bfb5-d6739de5abab" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Category.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Constants.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/singleitemscreen.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/layout_drawer_header.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/layout_drawer_header.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/src/main/res/menu/menu_main.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/array.xml" afterPath="$PROJECT_DIR$/src/main/res/values/array.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,27 +45,47 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="243" column="40" lean-forward="true" selection-start-line="243" selection-start-column="40" selection-end-line="243" selection-end-column="40" />
+            <state relative-caret-position="230">
+              <caret line="477" column="9" lean-forward="true" selection-start-line="477" selection-start-column="9" selection-end-line="477" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4561#5061#0" expanded="true" />
-                <element signature="e#5060#5061#0" expanded="true" />
-                <element signature="e#7273#7274#0" expanded="true" />
-                <element signature="e#7301#7302#0" expanded="true" />
-                <element signature="e#10461#10462#0" expanded="true" />
-                <element signature="e#10539#10540#0" expanded="true" />
-                <element signature="e#10802#11375#0" expanded="true" />
-                <element signature="e#11374#11375#0" expanded="true" />
-                <element signature="e#23812#24340#0" expanded="true" />
-                <element signature="e#24339#24340#0" expanded="true" />
-                <element signature="e#24400#25156#0" expanded="true" />
-                <element signature="e#25155#25156#0" expanded="true" />
-                <element signature="e#25216#25972#0" expanded="true" />
-                <element signature="e#25971#25972#0" expanded="true" />
-                <element signature="e#26087#26654#0" expanded="true" />
-                <element signature="e#26653#26654#0" expanded="true" />
+                <element signature="e#9647#9648#0" expanded="true" />
+                <element signature="e#9675#9676#0" expanded="true" />
+                <element signature="e#14563#14564#0" expanded="true" />
+                <element signature="e#14641#14642#0" expanded="true" />
+                <element signature="e#14904#15477#0" expanded="true" />
+                <element signature="e#15476#15477#0" expanded="true" />
+                <element signature="e#15538#18832#0" expanded="true" />
+                <element signature="e#18831#18832#0" expanded="true" />
+                <element signature="e#20136#20346#0" expanded="true" />
+                <element signature="e#20345#20346#0" expanded="true" />
+                <element signature="e#20425#20638#0" expanded="true" />
+                <element signature="e#20637#20638#0" expanded="true" />
+                <element signature="e#20715#20949#0" expanded="true" />
+                <element signature="e#20948#20949#0" expanded="true" />
+                <element signature="e#21030#21285#0" expanded="true" />
+                <element signature="e#21284#21285#0" expanded="true" />
+                <element signature="e#21367#21622#0" expanded="true" />
+                <element signature="e#21621#21622#0" expanded="true" />
+                <element signature="e#30853#31381#0" expanded="true" />
+                <element signature="e#31380#31381#0" expanded="true" />
+                <element signature="e#31441#32254#0" expanded="true" />
+                <element signature="e#32253#32254#0" expanded="true" />
+                <element signature="e#32314#33127#0" expanded="true" />
+                <element signature="e#33126#33127#0" expanded="true" />
+                <element signature="e#33242#33809#0" expanded="true" />
+                <element signature="e#33808#33809#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CropImage.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.theartofdev.edmodo/android-image-cropper/2.6.0/4bce67bb0804c641d79f497269b5f8a026804c77/android-image-cropper-2.6.0-sources.jar!/com/theartofdev/edmodo/cropper/CropImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="134" column="21" lean-forward="false" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +93,8 @@
       <file leaf-file-name="SingleItemActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="105">
+              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -95,28 +106,10 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="460" column="38" lean-forward="false" selection-start-line="460" selection-start-column="38" selection-end-line="460" selection-end-column="38" />
+            <state relative-caret-position="148">
+              <caret line="337" column="37" lean-forward="false" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
               <folding>
-                <element signature="e#3198#3213#0" expanded="true" />
-                <element signature="e#11527#11542#0" expanded="true" />
-                <element signature="e#11856#11871#0" expanded="true" />
-                <element signature="e#11966#11981#0" expanded="true" />
-                <element signature="e#12289#12304#0" expanded="true" />
-                <element signature="e#12352#12367#0" expanded="true" />
-                <element signature="e#12457#12472#0" expanded="true" />
-                <element signature="e#12822#12836#0" expanded="true" />
-                <element signature="e#13132#13147#0" expanded="true" />
-                <element signature="e#13461#13476#0" expanded="true" />
-                <element signature="e#13571#13586#0" expanded="true" />
-                <element signature="e#13895#13910#0" expanded="true" />
-                <element signature="e#13958#13973#0" expanded="true" />
-                <element signature="e#14062#14077#0" expanded="true" />
-                <element signature="e#14418#14432#0" expanded="true" />
-                <element signature="e#15055#15070#0" expanded="true" />
-                <element signature="e#18802#18817#0" expanded="true" />
-                <element signature="e#20908#20923#0" expanded="true" />
-                <element signature="e#26460#26475#0" expanded="true" />
+                <element signature="e#14300#14315#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,19 +118,48 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="array.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/array.xml">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="578" column="46" lean-forward="false" selection-start-line="578" selection-start-column="46" selection-end-line="578" selection-end-column="46" />
+              <folding>
+                <element signature="e#7017#7032#0" expanded="true" />
+                <element signature="e#8516#8531#0" expanded="true" />
+                <element signature="e#8577#8592#0" expanded="true" />
+                <element signature="e#13777#13792#0" expanded="true" />
+                <element signature="e#13839#13854#0" expanded="true" />
+                <element signature="e#14430#14445#0" expanded="true" />
+                <element signature="e#15870#15886#0" expanded="true" />
+                <element signature="e#15992#16006#0" expanded="true" />
+                <element signature="e#19383#19398#0" expanded="true" />
+                <element signature="e#21683#21697#0" expanded="true" />
+                <element signature="e#26766#26781#0" expanded="true" />
+                <element signature="e#33174#33188#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,15 +167,11 @@
       <file leaf-file-name="NewListingActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="79" column="71" lean-forward="false" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+            <state relative-caret-position="222">
+              <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding>
-                <element signature="e#3537#4061#0" expanded="true" />
-                <element signature="e#4060#4061#0" expanded="true" />
-                <element signature="e#4130#4654#0" expanded="true" />
-                <element signature="e#4653#4654#0" expanded="true" />
-                <element signature="e#4723#5247#0" expanded="true" />
-                <element signature="e#5246#5247#0" expanded="true" />
+                <element signature="e#7481#9292#0" expanded="true" />
+                <element signature="e#9291#9292#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,44 +183,19 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
+            <state relative-caret-position="423">
               <caret line="236" column="45" lean-forward="false" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact_selector.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/drawable/contact_selector.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="204">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="228" column="41" lean-forward="false" selection-start-line="228" selection-start-column="41" selection-end-line="228" selection-end-column="41" />
-              <folding>
-                <element signature="e#9373#9388#0" expanded="true" />
-                <element signature="e#9428#9443#0" expanded="true" />
-                <element signature="e#9559#9574#0" expanded="true" />
-                <element signature="e#9920#9935#0" expanded="true" />
-                <element signature="e#9975#9990#0" expanded="true" />
-                <element signature="e#10106#10121#0" expanded="true" />
-                <element signature="e#30226#35925#0" expanded="false" />
-                <element signature="e#35977#41675#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -220,30 +213,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sarah</find>
-      <find>clearm</find>
-      <find>invisi</find>
-      <find>item1stla</find>
-      <find>homepage_sear</find>
-      <find>desc</find>
-      <find>_sell</find>
-      <find>contac</find>
-      <find>intent</find>
-      <find>sample4</find>
-      <find>contact</find>
-      <find>timing</find>
-      <find>searc</find>
-      <find>filter</find>
-      <find>searchbutton</find>
-      <find>homebutt</find>
-      <find>view my</find>
-      <find>searchbuttoncl</find>
-      <find>new list</find>
+      <find>setupm</find>
+      <find>location</find>
+      <find>onmaprea</find>
+      <find>spinner</find>
+      <find>setupmap</find>
+      <find>mmap</find>
+      <find>cleaning</find>
+      <find>marker</find>
+      <find>item 1</find>
+      <find>sample1</find>
       <find>toast</find>
-      <find>enter your time</find>
-      <find>selling</find>
+      <find>sample</find>
+      <find>jessica</find>
+      <find>editt</find>
+      <find>item po</find>
+      <find>searchbuttonclic</find>
+      <find>button</find>
+      <find>reque</find>
+      <find>permission</find>
       <find>homepage_home</find>
-      <find>meet</find>
+      <find>newitempo</find>
+      <find>teach me</find>
+      <find>teach</find>
+      <find>itempostd</find>
+      <find>itempos</find>
+      <find>timing</find>
+      <find>enter your time</find>
+      <find>crop</find>
+      <find>intent</find>
+      <find>sell</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2250,8 +2249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/res/drawable/selling_contact_colored.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/src/main/res/drawable/contact_selector.xml" />
@@ -2261,20 +2258,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/singleitemscreen.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Category.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/array.xml" />
         <option value="$PROJECT_DIR$/src/main/res/menu/menu_main.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/layout_drawer_header.xml" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="12" />
     <option name="y" value="22" />
     <option name="width" value="1739" />
@@ -2312,6 +2311,9 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2343,15 +2345,24 @@
             </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2548,12 +2559,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="22" width="1739" height="966" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="801" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3643868" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3235725" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2565,14 +2577,13 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="112" y="122" width="1539" height="766" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31172657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3111588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13258691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30306605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19313304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08345535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2582,6 +2593,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="112" y="122" width="1539" height="766" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2604,38 +2616,166 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6664">
-          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4561#5061#0" expanded="true" />
-            <element signature="e#5060#5061#0" expanded="true" />
-            <element signature="e#7273#7274#0" expanded="true" />
-            <element signature="e#7301#7302#0" expanded="true" />
-            <element signature="e#10461#10462#0" expanded="true" />
-            <element signature="e#10539#10540#0" expanded="true" />
-            <element signature="e#10802#11375#0" expanded="true" />
-            <element signature="e#11374#11375#0" expanded="true" />
-            <element signature="e#23812#24340#0" expanded="true" />
-            <element signature="e#24339#24340#0" expanded="true" />
-            <element signature="e#24400#25156#0" expanded="true" />
-            <element signature="e#25155#25156#0" expanded="true" />
-            <element signature="e#25216#25972#0" expanded="true" />
-            <element signature="e#25971#25972#0" expanded="true" />
-            <element signature="e#26087#26654#0" expanded="true" />
-            <element signature="e#26653#26654#0" expanded="true" />
+            <element signature="e#9647#9648#0" expanded="true" />
+            <element signature="e#9675#9676#0" expanded="true" />
+            <element signature="e#14563#14564#0" expanded="true" />
+            <element signature="e#14641#14642#0" expanded="true" />
+            <element signature="e#14904#15477#0" expanded="true" />
+            <element signature="e#15476#15477#0" expanded="true" />
+            <element signature="e#15538#18832#0" expanded="true" />
+            <element signature="e#18831#18832#0" expanded="true" />
+            <element signature="e#20136#20346#0" expanded="true" />
+            <element signature="e#20345#20346#0" expanded="true" />
+            <element signature="e#20425#20638#0" expanded="true" />
+            <element signature="e#20637#20638#0" expanded="true" />
+            <element signature="e#20715#20949#0" expanded="true" />
+            <element signature="e#20948#20949#0" expanded="true" />
+            <element signature="e#21030#21285#0" expanded="true" />
+            <element signature="e#21284#21285#0" expanded="true" />
+            <element signature="e#21367#21622#0" expanded="true" />
+            <element signature="e#21621#21622#0" expanded="true" />
+            <element signature="e#30853#31381#0" expanded="true" />
+            <element signature="e#31380#31381#0" expanded="true" />
+            <element signature="e#31441#32254#0" expanded="true" />
+            <element signature="e#32253#32254#0" expanded="true" />
+            <element signature="e#32314#33127#0" expanded="true" />
+            <element signature="e#33126#33127#0" expanded="true" />
+            <element signature="e#33242#33809#0" expanded="true" />
+            <element signature="e#33808#33809#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/selling_contact_colored.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/selling_page.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7820">
+          <caret line="460" column="38" lean-forward="false" selection-start-line="460" selection-start-column="38" selection-end-line="460" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/array.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="79" column="71" lean-forward="false" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/singleitemscreen.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4012">
+          <caret line="236" column="45" lean-forward="false" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/contact_selector.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="228" column="41" lean-forward="false" selection-start-line="228" selection-start-column="41" selection-end-line="228" selection-end-column="41" />
+          <folding>
+            <element signature="e#7017#7032#0" expanded="true" />
+            <element signature="e#8516#8531#0" expanded="true" />
+            <element signature="e#8577#8592#0" expanded="true" />
+            <element signature="e#13777#13792#0" expanded="true" />
+            <element signature="e#13839#13854#0" expanded="true" />
+            <element signature="e#14430#14445#0" expanded="true" />
+            <element signature="e#15870#15886#0" expanded="true" />
+            <element signature="e#15992#16006#0" expanded="true" />
+            <element signature="e#19383#19398#0" expanded="true" />
+            <element signature="e#21683#21697#0" expanded="true" />
+            <element signature="e#26766#26781#0" expanded="true" />
+            <element signature="e#33174#33188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6664">
+          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9647#9648#0" expanded="true" />
+            <element signature="e#9675#9676#0" expanded="true" />
+            <element signature="e#14563#14564#0" expanded="true" />
+            <element signature="e#14641#14642#0" expanded="true" />
+            <element signature="e#14904#15477#0" expanded="true" />
+            <element signature="e#15476#15477#0" expanded="true" />
+            <element signature="e#15538#18832#0" expanded="true" />
+            <element signature="e#18831#18832#0" expanded="true" />
+            <element signature="e#20136#20346#0" expanded="true" />
+            <element signature="e#20345#20346#0" expanded="true" />
+            <element signature="e#20425#20638#0" expanded="true" />
+            <element signature="e#20637#20638#0" expanded="true" />
+            <element signature="e#20715#20949#0" expanded="true" />
+            <element signature="e#20948#20949#0" expanded="true" />
+            <element signature="e#21030#21285#0" expanded="true" />
+            <element signature="e#21284#21285#0" expanded="true" />
+            <element signature="e#21367#21622#0" expanded="true" />
+            <element signature="e#21621#21622#0" expanded="true" />
+            <element signature="e#30853#31381#0" expanded="true" />
+            <element signature="e#31380#31381#0" expanded="true" />
+            <element signature="e#31441#32254#0" expanded="true" />
+            <element signature="e#32253#32254#0" expanded="true" />
+            <element signature="e#32314#33127#0" expanded="true" />
+            <element signature="e#33126#33127#0" expanded="true" />
+            <element signature="e#33242#33809#0" expanded="true" />
+            <element signature="e#33808#33809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/selling_contact_colored.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -2670,14 +2810,18 @@
         <state relative-caret-position="8942">
           <caret line="843" column="69" lean-forward="true" selection-start-line="826" selection-start-column="23" selection-end-line="843" selection-end-column="69" />
           <folding>
-            <element signature="e#9373#9388#0" expanded="true" />
-            <element signature="e#9428#9443#0" expanded="true" />
-            <element signature="e#9559#9574#0" expanded="true" />
-            <element signature="e#9920#9935#0" expanded="true" />
-            <element signature="e#9975#9990#0" expanded="true" />
-            <element signature="e#10106#10121#0" expanded="true" />
-            <element signature="e#30226#35925#0" expanded="false" />
-            <element signature="e#35977#41675#0" expanded="false" />
+            <element signature="e#7017#7032#0" expanded="true" />
+            <element signature="e#8516#8531#0" expanded="true" />
+            <element signature="e#8577#8592#0" expanded="true" />
+            <element signature="e#13777#13792#0" expanded="true" />
+            <element signature="e#13839#13854#0" expanded="true" />
+            <element signature="e#14430#14445#0" expanded="true" />
+            <element signature="e#15870#15886#0" expanded="true" />
+            <element signature="e#15992#16006#0" expanded="true" />
+            <element signature="e#19383#19398#0" expanded="true" />
+            <element signature="e#21683#21697#0" expanded="true" />
+            <element signature="e#26766#26781#0" expanded="true" />
+            <element signature="e#33174#33188#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2710,22 +2854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/java/lang/CharSequence.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2733,18 +2865,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="161" column="23" lean-forward="false" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/selling_contact_colored.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/selling_contact_colored.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -2782,16 +2906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -2812,7 +2926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2820,7 +2933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2881,19 +2993,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/2e3bd347634617387cc4962fcf825781/jars/classes.jar!/android/support/design/widget/NavigationView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="209" column="16" lean-forward="false" selection-start-line="209" selection-start-column="16" selection-end-line="209" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2901,6 +3004,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="232" column="44" lean-forward="false" selection-start-line="232" selection-start-column="44" selection-end-line="232" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -2910,32 +3031,40 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="228" column="41" lean-forward="false" selection-start-line="228" selection-start-column="41" selection-end-line="228" selection-end-column="41" />
+        <state relative-caret-position="17">
+          <caret line="578" column="46" lean-forward="false" selection-start-line="578" selection-start-column="46" selection-end-line="578" selection-end-column="46" />
           <folding>
-            <element signature="e#9373#9388#0" expanded="true" />
-            <element signature="e#9428#9443#0" expanded="true" />
-            <element signature="e#9559#9574#0" expanded="true" />
-            <element signature="e#9920#9935#0" expanded="true" />
-            <element signature="e#9975#9990#0" expanded="true" />
-            <element signature="e#10106#10121#0" expanded="true" />
-            <element signature="e#30226#35925#0" expanded="false" />
-            <element signature="e#35977#41675#0" expanded="false" />
+            <element signature="e#7017#7032#0" expanded="true" />
+            <element signature="e#8516#8531#0" expanded="true" />
+            <element signature="e#8577#8592#0" expanded="true" />
+            <element signature="e#13777#13792#0" expanded="true" />
+            <element signature="e#13839#13854#0" expanded="true" />
+            <element signature="e#14430#14445#0" expanded="true" />
+            <element signature="e#15870#15886#0" expanded="true" />
+            <element signature="e#15992#16006#0" expanded="true" />
+            <element signature="e#19383#19398#0" expanded="true" />
+            <element signature="e#21683#21697#0" expanded="true" />
+            <element signature="e#26766#26781#0" expanded="true" />
+            <element signature="e#33174#33188#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="79" column="71" lean-forward="false" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+        <state relative-caret-position="222">
+          <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
-            <element signature="e#3537#4061#0" expanded="true" />
-            <element signature="e#4060#4061#0" expanded="true" />
-            <element signature="e#4130#4654#0" expanded="true" />
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="e#4723#5247#0" expanded="true" />
-            <element signature="e#5246#5247#0" expanded="true" />
+            <element signature="e#7481#9292#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2945,16 +3074,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
+        <state relative-caret-position="423">
           <caret line="236" column="45" lean-forward="false" selection-start-line="236" selection-start-column="45" selection-end-line="236" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -2964,54 +3085,62 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="460" column="38" lean-forward="false" selection-start-line="460" selection-start-column="38" selection-end-line="460" selection-end-column="38" />
+        <state relative-caret-position="148">
+          <caret line="337" column="37" lean-forward="false" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
           <folding>
-            <element signature="e#3198#3213#0" expanded="true" />
-            <element signature="e#11527#11542#0" expanded="true" />
-            <element signature="e#11856#11871#0" expanded="true" />
-            <element signature="e#11966#11981#0" expanded="true" />
-            <element signature="e#12289#12304#0" expanded="true" />
-            <element signature="e#12352#12367#0" expanded="true" />
-            <element signature="e#12457#12472#0" expanded="true" />
-            <element signature="e#12822#12836#0" expanded="true" />
-            <element signature="e#13132#13147#0" expanded="true" />
-            <element signature="e#13461#13476#0" expanded="true" />
-            <element signature="e#13571#13586#0" expanded="true" />
-            <element signature="e#13895#13910#0" expanded="true" />
-            <element signature="e#13958#13973#0" expanded="true" />
-            <element signature="e#14062#14077#0" expanded="true" />
-            <element signature="e#14418#14432#0" expanded="true" />
-            <element signature="e#15055#15070#0" expanded="true" />
-            <element signature="e#18802#18817#0" expanded="true" />
-            <element signature="e#20908#20923#0" expanded="true" />
-            <element signature="e#26460#26475#0" expanded="true" />
+            <element signature="e#14300#14315#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.theartofdev.edmodo/android-image-cropper/2.6.0/4bce67bb0804c641d79f497269b5f8a026804c77/android-image-cropper-2.6.0-sources.jar!/com/theartofdev/edmodo/cropper/CropImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="134" column="21" lean-forward="false" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="243" column="40" lean-forward="true" selection-start-line="243" selection-start-column="40" selection-end-line="243" selection-end-column="40" />
+        <state relative-caret-position="230">
+          <caret line="477" column="9" lean-forward="true" selection-start-line="477" selection-start-column="9" selection-end-line="477" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4561#5061#0" expanded="true" />
-            <element signature="e#5060#5061#0" expanded="true" />
-            <element signature="e#7273#7274#0" expanded="true" />
-            <element signature="e#7301#7302#0" expanded="true" />
-            <element signature="e#10461#10462#0" expanded="true" />
-            <element signature="e#10539#10540#0" expanded="true" />
-            <element signature="e#10802#11375#0" expanded="true" />
-            <element signature="e#11374#11375#0" expanded="true" />
-            <element signature="e#23812#24340#0" expanded="true" />
-            <element signature="e#24339#24340#0" expanded="true" />
-            <element signature="e#24400#25156#0" expanded="true" />
-            <element signature="e#25155#25156#0" expanded="true" />
-            <element signature="e#25216#25972#0" expanded="true" />
-            <element signature="e#25971#25972#0" expanded="true" />
-            <element signature="e#26087#26654#0" expanded="true" />
-            <element signature="e#26653#26654#0" expanded="true" />
+            <element signature="e#9647#9648#0" expanded="true" />
+            <element signature="e#9675#9676#0" expanded="true" />
+            <element signature="e#14563#14564#0" expanded="true" />
+            <element signature="e#14641#14642#0" expanded="true" />
+            <element signature="e#14904#15477#0" expanded="true" />
+            <element signature="e#15476#15477#0" expanded="true" />
+            <element signature="e#15538#18832#0" expanded="true" />
+            <element signature="e#18831#18832#0" expanded="true" />
+            <element signature="e#20136#20346#0" expanded="true" />
+            <element signature="e#20345#20346#0" expanded="true" />
+            <element signature="e#20425#20638#0" expanded="true" />
+            <element signature="e#20637#20638#0" expanded="true" />
+            <element signature="e#20715#20949#0" expanded="true" />
+            <element signature="e#20948#20949#0" expanded="true" />
+            <element signature="e#21030#21285#0" expanded="true" />
+            <element signature="e#21284#21285#0" expanded="true" />
+            <element signature="e#21367#21622#0" expanded="true" />
+            <element signature="e#21621#21622#0" expanded="true" />
+            <element signature="e#30853#31381#0" expanded="true" />
+            <element signature="e#31380#31381#0" expanded="true" />
+            <element signature="e#31441#32254#0" expanded="true" />
+            <element signature="e#32253#32254#0" expanded="true" />
+            <element signature="e#32314#33127#0" expanded="true" />
+            <element signature="e#33126#33127#0" expanded="true" />
+            <element signature="e#33242#33809#0" expanded="true" />
+            <element signature="e#33808#33809#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -213,6 +213,7 @@
                     android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/selling_titleEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/title_desc"
@@ -250,6 +251,7 @@
                     android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/selling_descEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/selling_desc"
@@ -287,6 +289,7 @@
                     android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/selling_priceEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/price_desc"
@@ -325,6 +328,7 @@
                     android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/selling_timeEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/timing_desc"
@@ -335,7 +339,6 @@
                     android:cursorVisible="true"
                     android:background="#00000000"
                     android:gravity="right|center"
-                    android:inputType="time"
                     />
 
                 <View
@@ -465,6 +468,7 @@
                 android:layout_centerVertical="true"/>
 
                 <EditText
+                    android:id="@+id/selling_meetUpEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Enter your Meet-up location"
