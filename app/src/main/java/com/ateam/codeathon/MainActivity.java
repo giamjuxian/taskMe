@@ -235,7 +235,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addBabySittingMarker() {
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 40; i++) {
             Marker marker =
                     mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.baby)));
@@ -245,7 +245,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addCleaningMarker() {
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < 40; i++) {
             Marker marker =
                 mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.cleaning)));
@@ -254,7 +254,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addCookingMarker() {
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < 50; i++) {
             Marker marker =
                     mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.cooking)));
@@ -263,7 +263,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addGroceryShoppingMarker() {
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < 50; i++) {
             Marker marker =
                     mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.shopping)));
@@ -272,7 +272,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addPetsMarker() {
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < 50; i++) {
             Marker marker =
                     mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.dog)));
@@ -281,7 +281,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addOthersMarker() {
-        for(int i = 0; i < 30; i++) {
+        for(int i = 0; i < 50; i++) {
             Marker marker =
                     mMap.addMarker(new MarkerOptions().position(new LatLng(randomFloat(1.3f, 1.4f), randomFloat(103.67f, 103.95f)))
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.other)));
