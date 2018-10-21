@@ -11,15 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0f2aee-cbfa-4faa-bfb5-d6739de5abab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +37,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="477" column="9" lean-forward="true" selection-start-line="477" selection-start-column="9" selection-end-line="477" selection-end-column="9" />
+            <state relative-caret-position="382">
+              <caret line="843" column="47" lean-forward="false" selection-start-line="843" selection-start-column="47" selection-end-line="843" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#9647#9648#0" expanded="true" />
@@ -93,7 +85,7 @@
       <file leaf-file-name="SingleItemActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="231">
               <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
@@ -236,13 +228,13 @@
       <find>newitempo</find>
       <find>teach me</find>
       <find>teach</find>
-      <find>itempostd</find>
       <find>itempos</find>
       <find>timing</find>
       <find>enter your time</find>
       <find>crop</find>
       <find>intent</find>
       <find>sell</find>
+      <find>itempostd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2265,11 +2257,11 @@
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/selling_page.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -3050,14 +3042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/NewListingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -3109,10 +3093,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/SingleItemActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ateam/codeathon/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="477" column="9" lean-forward="true" selection-start-line="477" selection-start-column="9" selection-end-line="477" selection-end-column="9" />
+        <state relative-caret-position="382">
+          <caret line="843" column="47" lean-forward="false" selection-start-line="843" selection-start-column="47" selection-end-line="843" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9647#9648#0" expanded="true" />
